@@ -1,4 +1,6 @@
 
+import { Film } from 'lucide-react';
+
 interface VideoEmbedProps {
   title: string;
   description?: string;
