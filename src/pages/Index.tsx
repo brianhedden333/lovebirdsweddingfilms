@@ -27,12 +27,17 @@ const Index = () => {
       <Header />
       
       {/* Hero Section with Vimeo Video Background */}
-      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden pt-16">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ width: '100vw', height: '100vh', objectFit: 'cover' }}
+            className="absolute inset-0 w-full h-full"
+            style={{ 
+              width: '100vw', 
+              height: '100vh', 
+              transform: 'scale(1.2)', 
+              transformOrigin: 'center center'
+            }}
             allow="autoplay; fullscreen"
             title="Love Birds Wedding Films Background"
           />
