@@ -16,15 +16,16 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100" style={{ height: '100vh' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/aa0b79ee-d0e7-4b23-a9f5-43a45679b865.png" 
               alt="Love Birds Wedding Films" 
-              className="w-10 h-10"
+              className="h-10"
+              style={{ aspectRatio: 'auto' }}
             />
             <span className="text-xl font-serif text-gray-900 font-light">Love Birds Wedding Films</span>
           </Link>

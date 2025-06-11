@@ -13,10 +13,14 @@ const Index = () => {
     '/lovable-uploads/e191e074-449c-4a21-b32f-b727657d412f.png',
     '/lovable-uploads/d951e5ac-7fc1-4053-a7d2-3b5131f1de71.png',
     '/lovable-uploads/1ce2b5ba-2869-40d5-aee3-d18a2266df72.png',
-    'https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1525258428355-d5b286c77538?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1573496267526-249d48c2a06a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+    '/lovable-uploads/0320dc7b-7bdf-432e-826d-89094d7190b3.png',
+    '/lovable-uploads/af471e6f-52a3-44a8-81b1-65913f79dacd.png',
+    '/lovable-uploads/d92965bf-4069-4ab3-a957-459b809fc268.png'
   ];
+
+  const handleContactClick = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="min-h-screen">
@@ -98,7 +102,7 @@ const Index = () => {
       <section id="portfolio" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-gray-900 text-center mb-12 font-light">
-            Recent Features
+            Love is in the Air
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
@@ -125,7 +129,11 @@ const Index = () => {
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Camera className="w-8 h-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-serif text-gray-900 mb-3 font-light">Service Me</h3>
+              <h3 className="text-xl font-serif text-gray-900 mb-3 font-light">
+                <button onClick={handleContactClick} className="hover:text-teal-600 transition-colors">
+                  Contact Me
+                </button>
+              </h3>
               <p className="text-gray-600 font-light">Initial consultation to understand your vision and style preferences</p>
             </div>
             <div className="text-center">
@@ -180,7 +188,7 @@ const Index = () => {
           <VideoEmbed
             title="David and Shanna"
             description="A beautiful countryside wedding celebration"
-            videoId="1092532920/857ecdef6e"
+            videoId="1092532920"
             platform="vimeo"
           />
           
