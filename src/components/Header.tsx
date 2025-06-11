@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Camera, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -20,11 +20,13 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center">
-              <Camera className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-serif text-gray-900">Lisa Photography</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/aa0b79ee-d0e7-4b23-a9f5-43a45679b865.png" 
+              alt="Love Birds Wedding Films" 
+              className="w-10 h-10"
+            />
+            <span className="text-xl font-serif text-gray-900 font-light">Love Birds Wedding Films</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,7 +35,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-teal-600 ${
+                className={`text-sm font-light transition-colors duration-200 hover:text-teal-600 ${
                   location.pathname === item.href ? 'text-teal-600' : 'text-gray-700'
                 }`}
               >
@@ -63,7 +65,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
+                  className="block px-3 py-2 text-base font-light text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

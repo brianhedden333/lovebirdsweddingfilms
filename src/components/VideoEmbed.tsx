@@ -8,22 +8,26 @@ interface VideoEmbedProps {
   platform?: 'youtube' | 'vimeo';
 }
 
-const VideoEmbed = ({ title, description, videoId, platform = 'youtube' }: VideoEmbedProps) => {
+const VideoEmbed = ({ title, description, videoId, platform = 'vimeo' }: VideoEmbedProps) => {
   const getEmbedUrl = () => {
     if (!videoId) return '';
     
     if (platform === 'youtube') {
       return `https://www.youtube.com/embed/${videoId}`;
     } else {
+      // Handle Vimeo URLs with privacy tokens
+      if (videoId.includes('/')) {
+        return `https://player.vimeo.com/video/${videoId}`;
+      }
       return `https://player.vimeo.com/video/${videoId}`;
     }
   };
 
   return (
     <div className="mb-8">
-      <h3 className="text-2xl font-serif text-gray-900 mb-2 text-center">{title}</h3>
+      <h3 className="text-2xl font-serif text-gray-900 mb-2 text-center font-light">{title}</h3>
       {description && (
-        <p className="text-gray-600 text-center mb-6">{description}</p>
+        <p className="text-gray-600 text-center mb-6 font-light">{description}</p>
       )}
       
       <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-lg">
@@ -41,7 +45,7 @@ const VideoEmbed = ({ title, description, videoId, platform = 'youtube' }: Video
               <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Film className="w-8 h-8 text-gray-500" />
               </div>
-              <p className="text-gray-500">Video coming soon</p>
+              <p className="text-gray-500 font-light">Video coming soon</p>
             </div>
           </div>
         )}
