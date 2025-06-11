@@ -27,7 +27,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section with Vimeo Video Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df"
@@ -69,7 +69,7 @@ const Index = () => {
                 capture those fleeting moments that become forever memories.
               </p>
               <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-light">
-                "To start this day out, I hope you'll want to hear more about my work and process."
+                "Brian doesn't just capture moments - he captures souls. His ability to see the raw emotion and translate it into pure cinematic poetry left us speechless. Our wedding film isn't just a video; it's a masterpiece that makes us fall in love all over again every time we watch it."
               </blockquote>
             </div>
           </div>
