@@ -1,46 +1,28 @@
-
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import VideoEmbed from '@/components/VideoEmbed';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-
 const Index = () => {
-  const galleryImages = [
-    '/lovable-uploads/e11d75ef-9d3a-4b20-9b36-c73f19eaa71a.png',
-    '/lovable-uploads/b3be7fa1-64a2-45a2-a9ab-a52e499d1181.png',
-    '/lovable-uploads/e191e074-449c-4a21-b32f-b727657d412f.png',
-    '/lovable-uploads/d951e5ac-7fc1-4053-a7d2-3b5131f1de71.png',
-    '/lovable-uploads/1ce2b5ba-2869-40d5-aee3-d18a2266df72.png',
-    '/lovable-uploads/0320dc7b-7bdf-432e-826d-89094d7190b3.png',
-    '/lovable-uploads/af471e6f-52a3-44a8-81b1-65913f79dacd.png',
-    '/lovable-uploads/d92965bf-4069-4ab3-a957-459b809fc268.png'
-  ];
-
+  const galleryImages = ['/lovable-uploads/e11d75ef-9d3a-4b20-9b36-c73f19eaa71a.png', '/lovable-uploads/b3be7fa1-64a2-45a2-a9ab-a52e499d1181.png', '/lovable-uploads/e191e074-449c-4a21-b32f-b727657d412f.png', '/lovable-uploads/d951e5ac-7fc1-4053-a7d2-3b5131f1de71.png', '/lovable-uploads/1ce2b5ba-2869-40d5-aee3-d18a2266df72.png', '/lovable-uploads/0320dc7b-7bdf-432e-826d-89094d7190b3.png', '/lovable-uploads/af471e6f-52a3-44a8-81b1-65913f79dacd.png', '/lovable-uploads/d92965bf-4069-4ab3-a957-459b809fc268.png'];
   const handleContactClick = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section with Vimeo Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <iframe
-            src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df"
-            className="absolute inset-0 w-full h-full"
-            style={{ 
-              width: '100vw', 
-              height: '100vh', 
-              transform: 'scale(1.2)', 
-              transformOrigin: 'center center'
-            }}
-            allow="autoplay; fullscreen"
-            title="Love Birds Wedding Films Background"
-          />
+          <iframe src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df" className="absolute inset-0 w-full h-full" style={{
+          width: '100vw',
+          height: '100vh',
+          transform: 'scale(1.2)',
+          transformOrigin: 'center center'
+        }} allow="autoplay; fullscreen" title="Love Birds Wedding Films Background" />
         </div>
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white px-4">
@@ -58,11 +40,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-center md:text-left">
-              <img
-                src="/lovable-uploads/90960265-0241-426e-9431-63c851601fad.png"
-                alt="Brian Hedden - Wedding Filmmaker"
-                className="w-64 h-64 rounded-full object-cover mx-auto md:mx-0 shadow-lg"
-              />
+              <img src="/lovable-uploads/90960265-0241-426e-9431-63c851601fad.png" alt="Brian Hedden - Wedding Filmmaker" className="w-64 h-64 rounded-full object-cover mx-auto md:mx-0 shadow-lg" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6 font-light">
@@ -73,9 +51,7 @@ const Index = () => {
                 Your wedding day is a celebration of your unique journey together, and I'm honored to 
                 capture those fleeting moments that become forever memories.
               </p>
-              <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-light">
-                "Brian doesn't just capture moments - he captures souls. His ability to see the raw emotion and translate it into pure cinematic poetry left us speechless. Our wedding film isn't just a video; it's a masterpiece that makes us fall in love all over again every time we watch it."
-              </blockquote>
+              <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-light">“I cry watching our wedding film—it captured every moment so beautifully. It’s like reliving the best day of our lives.</blockquote>
             </div>
           </div>
         </div>
@@ -83,12 +59,9 @@ const Index = () => {
 
       {/* Capture the Moment */}
       <section className="relative h-96 flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/lovable-uploads/e11d75ef-9d3a-4b20-9b36-c73f19eaa71a.png)'
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: 'url(/lovable-uploads/e11d75ef-9d3a-4b20-9b36-c73f19eaa71a.png)'
+      }} />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white">
           <h2 className="text-4xl md:text-6xl font-serif font-light">Capture the Moment</h2>
@@ -110,15 +83,9 @@ const Index = () => {
             Love is in the Air
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <img
-                  src={image}
-                  alt={`Wedding photo ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
+            {galleryImages.map((image, index) => <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                <img src={image} alt={`Wedding photo ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              </div>)}
           </div>
         </div>
       </section>
@@ -168,12 +135,9 @@ const Index = () => {
 
       {/* Samples Section */}
       <section className="relative h-96 flex items-center justify-center">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/lovable-uploads/641b4e78-5c14-4efc-bd72-e0c6ad2da92e.png)'
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: 'url(/lovable-uploads/641b4e78-5c14-4efc-bd72-e0c6ad2da92e.png)'
+      }} />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white">
           <h2 className="text-4xl md:text-6xl font-serif font-light">Samples</h2>
@@ -183,38 +147,18 @@ const Index = () => {
       {/* Wedding Video Showcases */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VideoEmbed
-            title="Emily and Michael"
-            description="An elegant city wedding with timeless romance"
-            videoId="732245572"
-            platform="vimeo"
-          />
+          <VideoEmbed title="Emily and Michael" description="An elegant city wedding with timeless romance" videoId="732245572" platform="vimeo" />
           
-          <VideoEmbed
-            title="David and Shanna"
-            description="A beautiful countryside wedding celebration"
-            videoId="1092532920"
-            platform="vimeo"
-          />
+          <VideoEmbed title="David and Shanna" description="A beautiful countryside wedding celebration" videoId="1092532920" platform="vimeo" />
           
-          <VideoEmbed
-            title="Arti and Brandon"
-            description="A celebration of love in stunning mountain scenery"
-            videoId="873857580"
-            platform="vimeo"
-          />
+          <VideoEmbed title="Arti and Brandon" description="A celebration of love in stunning mountain scenery" videoId="873857580" platform="vimeo" />
         </div>
       </section>
 
       {/* Aerial Drone Video */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VideoEmbed
-            title="Aerial Drone Video"
-            description="Breathtaking aerial perspectives of your special venues"
-            videoId="728224554"
-            platform="vimeo"
-          />
+          <VideoEmbed title="Aerial Drone Video" description="Breathtaking aerial perspectives of your special venues" videoId="728224554" platform="vimeo" />
           <p className="text-center text-gray-600 mt-6 font-light">
             Experience your wedding from a whole new perspective with stunning aerial cinematography 
             that captures the grandeur and beauty of your celebration.
@@ -224,21 +168,14 @@ const Index = () => {
 
       {/* About Me */}
       <section id="about" className="relative py-20">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/lovable-uploads/20239601-afdc-42b7-a969-083b2abcf684.png)'
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: 'url(/lovable-uploads/20239601-afdc-42b7-a969-083b2abcf684.png)'
+      }} />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-4xl md:text-6xl font-serif mb-8 font-light">About Me</h2>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <img
-              src="/lovable-uploads/90960265-0241-426e-9431-63c851601fad.png"
-              alt="Brian Hedden"
-              className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
-            />
+            <img src="/lovable-uploads/90960265-0241-426e-9431-63c851601fad.png" alt="Brian Hedden" className="w-32 h-32 rounded-full object-cover mx-auto mb-6" />
             <h3 className="text-2xl font-serif mb-4 font-light">Brian Hedden, filmmaker</h3>
             <p className="text-lg leading-relaxed font-light">
               With over a decade of experience in wedding photography and videography, I've had the 
@@ -253,20 +190,15 @@ const Index = () => {
 
       {/* Dramatic Silhouette */}
       <section className="h-screen">
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/lovable-uploads/41b3a597-b702-4335-9a18-7814b9580225.png)'
-          }}
-        />
+        <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: 'url(/lovable-uploads/41b3a597-b702-4335-9a18-7814b9580225.png)'
+      }} />
       </section>
 
       {/* Contact Form */}
       <ContactForm />
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
