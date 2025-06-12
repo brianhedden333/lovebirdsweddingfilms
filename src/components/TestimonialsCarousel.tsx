@@ -7,8 +7,8 @@ const TestimonialsCarousel = () => {
 
   const testimonials = [
     {
-      text: "Love Birds Wedding Films captured our day with such artistry and emotion. Every moment was beautifully preserved, and we couldn't be happier with the results.",
-      author: "Sarah & Michael",
+      text: "Just a few weeks before our wedding, I was having regrets about not getting a videographer. Really, I only wanted our ceremony to look back on over the years and I wasn't sure a videographer would do that for us. Brian was a fantastic last minute decision. It worked out perfectly! I knew from the video call meeting that Brian was the right personality to work with us and that he really knew what he was doing (I felt completely confident in him and trusted him). We shared exactly what we were looking for and Brian worked with us to make sure we were happy and he was easy to reach if/when we had questions. On the day of, Brian was not only on time but one of the few things I had absolutely no worries about. He coordinated with our DJ and photographer to get our ceremony video perfect. The final video is everything I was hoping for and so, so beautiful! I highly recommend him!",
+      author: "Chris & Theresa",
       location: "Boulder, Colorado"
     },
     {
