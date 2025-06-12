@@ -12,20 +12,16 @@ const TestimonialsCarousel = () => {
       location: "Boulder, Colorado"
     },
     {
-      text: "The team's attention to detail and ability to capture the essence of our love story was incredible. Our wedding film brings tears to our eyes every time we watch it.",
-      author: "Emily & James",
-      location: "Aspen, Colorado"
+      text: "We are so grateful to have had Brian capture our wedding day. He brought a wealth of knowledge about filmmaking, was easy to work with, and genuinely cared about doing a good job. Most importantly, he created a beautiful product. We would recommend Brian Hedden Wedding Films wholly. Thank you, Brian!",
+      author: "Emily & Michael",
+      location: "Golden, Colorado"
     },
     {
-      text: "Professional, creative, and so easy to work with. They made us feel comfortable and natural, resulting in the most beautiful wedding memories we could have asked for.",
-      author: "Arti & Brandon",
-      location: "Vail, Colorado"
+      text: "Brian was recommended to us by a close friend to film our two wedding ceremonies, one Indian and one American. Not only did he capture both ceremonies beautifully but he was also a pleasure to be around; there were not many guests in attendance yet everyone who was there enjoyed Brian’s presence as he spent the day with us. Additionally, we received both videos not even two weeks after our ceremonies and they are both beautifully done. Brian far surpassed any expectations that we may have had and we are grateful to forever have video of our special day.",
+      author: "Samantha & Sagar",
+      location: "Breckenridge, Colorado"
     },
-    {
-      text: "From our engagement session to our wedding day, Love Birds Wedding Films exceeded every expectation. Their cinematic style is absolutely stunning.",
-      author: "David & Shanna",
-      location: "Denver, Colorado"
-    }
+    
   ];
 
   const nextTestimonial = () => {
