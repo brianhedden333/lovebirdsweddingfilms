@@ -7,10 +7,31 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  const handleNavClick = (href: string) => {
+    setIsMenuOpen(false);
+    
+    if (href.startsWith('#')) {
+      // If we're not on the home page, navigate to home first
+      if (location.pathname !== '/') {
+        window.location.href = `/${href}`;
+        return;
+      }
+      
+      // If we're on the home page, smooth scroll to section
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (href === '/pricing') {
+      // For pricing page, scroll to top after navigation
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Portfolio', href: '#samples' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -36,6 +57,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className={`text-sm font-light transition-colors duration-200 hover:text-teal-600 ${
                   location.pathname === item.href ? 'text-teal-600' : 'text-gray-700'
                 }`}
@@ -67,7 +89,7 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className="block px-3 py-2 text-base font-light text-gray-700 hover:text-teal-600 hover:bg-gray-50 rounded-md"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => handleNavClick(item.href)}
                 >
                   {item.name}
                 </Link>

@@ -1,11 +1,18 @@
+
 import { Check } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import VideoEmbed from '@/components/VideoEmbed';
+
 const Pricing = () => {
   const services = ['Planning and consultation with you, the wedding planner, and/or vendors', 'Coverage from 2 hours (elopement) to 12 hours (full celebration)', 'Online photo finishing directions and weather contingency - up to two revisions if needed', 'Online gallery', 'Print release for personal use', 'Video content options for before and/or after the ceremony', 'Expert hair and makeup coordination', 'Bridal portraits', 'The last element that tops it all off', 'One round of editing feedback', 'Digital delivery and cloud storage'];
   const portfolioImages = ['https://images.unsplash.com/photo-1519741497674-611481863552', 'https://images.unsplash.com/photo-1583939003579-730e3918a45a', 'https://images.unsplash.com/photo-1537633552985-df8429e8048b', 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92'];
   const nextSteps = ['Contact for custom quote based on your specific needs and vision', 'Contract signing and booking process with deposit', 'Pre-wedding consultation and timeline planning', 'Professional wedding day coverage with artistic storytelling', 'Post-production editing and delivery of final gallery'];
+  
+  const handleStartJourney = () => {
+    window.location.href = '/#contact';
+  };
+
   return <div className="min-h-screen">
       <Header />
       
@@ -164,7 +171,12 @@ const Pricing = () => {
 
           {/* Ceremony Sample Video */}
           <div className="mt-16">
-            <VideoEmbed title="Ceremony Sample" description="A glimpse into the beautiful moments we capture during your ceremony" />
+            <VideoEmbed 
+              title="Ceremony Sample" 
+              description="A glimpse into the beautiful moments we capture during your ceremony" 
+              videoId="1092532920" 
+              platform="vimeo" 
+            />
           </div>
         </div>
       </section>
@@ -193,7 +205,7 @@ const Pricing = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Personal approach to wedding photography" className="w-full h-96 object-cover rounded-lg shadow-lg" />
+              <img src="/lovable-uploads/a9a29b16-6975-4627-a6f6-a78bff1b4219.png" alt="Brian filming a wedding" className="w-full h-96 object-cover rounded-lg shadow-lg" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
@@ -218,7 +230,7 @@ const Pricing = () => {
       {/* Next Steps Header */}
       <section className="relative h-96 flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'
+        backgroundImage: 'url(/lovable-uploads/85c03a0a-4dc5-482a-9347-4974109c3d9a.png)'
       }} />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white">
@@ -241,9 +253,12 @@ const Pricing = () => {
                   </li>)}
               </ol>
               <div className="mt-8">
-                <a href="/#contact" className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-200 inline-block">
+                <button 
+                  onClick={handleStartJourney}
+                  className="bg-teal-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-200"
+                >
                   Start Your Journey
-                </a>
+                </button>
               </div>
             </div>
             <div>
@@ -256,4 +271,5 @@ const Pricing = () => {
       <Footer />
     </div>;
 };
+
 export default Pricing;

@@ -1,28 +1,38 @@
+
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import VideoEmbed from '@/components/VideoEmbed';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+
 const Index = () => {
   const galleryImages = ['/lovable-uploads/e11d75ef-9d3a-4b20-9b36-c73f19eaa71a.png', '/lovable-uploads/b3be7fa1-64a2-45a2-a9ab-a52e499d1181.png', '/lovable-uploads/e191e074-449c-4a21-b32f-b727657d412f.png', '/lovable-uploads/d951e5ac-7fc1-4053-a7d2-3b5131f1de71.png', '/lovable-uploads/1ce2b5ba-2869-40d5-aee3-d18a2266df72.png', '/lovable-uploads/0320dc7b-7bdf-432e-826d-89094d7190b3.png', '/lovable-uploads/af471e6f-52a3-44a8-81b1-65913f79dacd.png', '/lovable-uploads/d92965bf-4069-4ab3-a957-459b809fc268.png'];
+  
   const handleContactClick = () => {
     document.getElementById('contact')?.scrollIntoView({
       behavior: 'smooth'
     });
   };
+
   return <div className="min-h-screen">
       <Header />
       
       {/* Hero Section with Vimeo Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
-          <iframe src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df" className="absolute inset-0 w-full h-full" style={{
-          width: '100vw',
-          height: '100vh',
-          transform: 'scale(1.2)',
-          transformOrigin: 'center center'
-        }} allow="autoplay; fullscreen" title="Love Birds Wedding Films Background" />
+          <iframe 
+            src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df" 
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2"
+            style={{
+              minWidth: '100%',
+              minHeight: '100%',
+              width: 'auto',
+              height: 'auto'
+            }}
+            allow="autoplay; fullscreen" 
+            title="Love Birds Wedding Films Background" 
+          />
         </div>
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white px-4">
@@ -51,7 +61,7 @@ const Index = () => {
                 Your wedding day is a celebration of your unique journey together, and I'm honored to 
                 capture those fleeting moments that become forever memories.
               </p>
-              <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-light">“I cry watching our wedding film—it captured every moment so beautifully. It’s like reliving the best day of our lives.</blockquote>
+              <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-light">"Brian captured our wedding with such incredible attention to detail and emotion. Every time we watch our film, we're transported back to that magical day. His work is pure artistry."</blockquote>
             </div>
           </div>
         </div>
@@ -134,7 +144,7 @@ const Index = () => {
       </section>
 
       {/* Samples Section */}
-      <section className="relative h-96 flex items-center justify-center">
+      <section id="samples" className="relative h-96 flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: 'url(/lovable-uploads/641b4e78-5c14-4efc-bd72-e0c6ad2da92e.png)'
       }} />
@@ -201,4 +211,5 @@ const Index = () => {
       <Footer />
     </div>;
 };
+
 export default Index;
