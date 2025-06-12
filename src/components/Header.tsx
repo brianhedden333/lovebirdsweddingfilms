@@ -10,7 +10,10 @@ const Header = () => {
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
     
-    if (href.startsWith('#')) {
+    if (href === '/') {
+      // For home page, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (href.startsWith('#')) {
       // If we're not on the home page, navigate to home first
       if (location.pathname !== '/') {
         window.location.href = `/${href}`;
