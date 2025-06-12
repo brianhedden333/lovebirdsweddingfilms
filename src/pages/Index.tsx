@@ -34,7 +34,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <iframe 
-            src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&background=1&h=712f8b21df" 
+            src="https://player.vimeo.com/video/1092546746?background=1&autoplay=1&loop=1&muted=1&background=1&h=712f8b21df" 
             className="absolute top-0 left-1/2 h-full w-auto min-w-full transform -translate-x-1/2"
             style={{
               minHeight: '100%',
