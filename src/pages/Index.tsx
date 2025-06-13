@@ -171,9 +171,9 @@ const Index = () => {
       {/* Wedding Video Showcases */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VideoEmbed title="Emily and Michael" description="An elegant city wedding with timeless romance" videoId="732245572" platform="vimeo" />
+          <VideoEmbed title="Emily and Michael" description="An elegant country club wedding with timeless romance" videoId="732245572" platform="vimeo" />
           
-          <VideoEmbed title="David and Shanna" description="A beautiful countryside wedding celebration" videoId="1092532920" platform="vimeo" />
+          <VideoEmbed title="David and Shanna" description="A beautiful mountainside wedding celebration" videoId="1092532920" platform="vimeo" />
           
           <VideoEmbed title="Arti and Brandon" description="A celebration of love in stunning mountain scenery" videoId="873857580" platform="vimeo" />
         </div>
@@ -182,7 +182,7 @@ const Index = () => {
       {/* Aerial Drone Video */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VideoEmbed title="Aerial Drone Video" description="Breathtaking aerial perspectives of your special venues" videoId="728224554" platform="vimeo" />
+          <VideoEmbed title="Aerial Drone Video" description="Breathtaking aerial perspectives of your special day included in every video" videoId="728224554" platform="vimeo" />
           <p className="text-center text-gray-600 mt-6 font-light">
             Experience your wedding from a whole new perspective with stunning aerial cinematography 
             that captures the grandeur and beauty of your celebration.
@@ -205,8 +205,7 @@ const Index = () => {
               With over a decade of experience in wedding photography and videography, I've had the 
               privilege of documenting love stories across the country. My passion lies in creating 
               authentic, emotional imagery that tells the unique story of each couple. When I'm not 
-              behind the camera, you'll find me exploring new locations, studying light, and constantly 
-              refining my craft to better serve my couples.
+              behind the camera, you'll find me enjoying nature, exercising, and planning my next documentary project.
             </p>
           </div>
         </div>
