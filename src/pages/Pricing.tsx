@@ -79,7 +79,7 @@ const Pricing = () => {
             {/* Elopement Package */}
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
               <h3 className="text-2xl font-serif text-gray-900 mb-4">Ceremony Package</h3>
-              <div className="text-4xl font-bold text-teal-600 mb-6">$1,200</div>
+              <div className="text-4xl font-bold text-teal-600 mb-6">$900</div>
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
@@ -120,7 +120,7 @@ const Pricing = () => {
                 Most Popular
               </div>
               <h3 className="text-2xl font-serif text-gray-900 mb-4">Highlight Package</h3>
-              <div className="text-4xl font-bold text-teal-600 mb-6">$2,800</div>
+              <div className="text-4xl font-bold text-teal-600 mb-6">$1,900</div>
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
@@ -156,7 +156,7 @@ const Pricing = () => {
             {/* Full Celebration */}
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
               <h3 className="text-2xl font-serif text-gray-900 mb-4">Full Celebration</h3>
-              <div className="text-4xl font-bold text-teal-600 mb-6">$4,500</div>
+              <div className="text-4xl font-bold text-teal-600 mb-6">$3,900</div>
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
