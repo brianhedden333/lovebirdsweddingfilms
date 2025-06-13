@@ -169,11 +169,13 @@ const Index = () => {
       {/* Wedding Video Showcases */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <VideoEmbed title="Emily and Michael" description="An elegant country club wedding with timeless romance" videoId="732245572" platform="vimeo" />
+         <VideoEmbed title="Arti and Brandon" description="A celebration of love in stunning mountain scenery. 12-minute Highlight." videoId="873857580" platform="vimeo" />
+         
+         <VideoEmbed title="Emily and Michael" description="An elegant country club wedding with timeless romance. 3-minute Highlight." videoId="732245572" platform="vimeo" />
           
-          <VideoEmbed title="David and Shanna" description="A beautiful mountainside wedding celebration" videoId="1092532920" platform="vimeo" />
+         <VideoEmbed title="David and Shanna" description="A beautiful mountainside wedding celebration. Full Ceremony." videoId="1092532920" platform="vimeo" />
           
-          <VideoEmbed title="Arti and Brandon" description="A celebration of love in stunning mountain scenery" videoId="873857580" platform="vimeo" />
+          
         </div>
       </section>
 

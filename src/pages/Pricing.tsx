@@ -6,7 +6,7 @@ import VideoEmbed from '@/components/VideoEmbed';
 
 const Pricing = () => {
   const services = ['Planning and consultation with you, the wedding planner, and/or vendors', 'Coverage from 2 hours to 12 hours', 'Free travel up to 50 miles from Boulder', 'Cinematic Aerial Footage', 'Video content options for before and/or after the ceremony', 'Support with livestreaming', 'Edited to your personalized soundtrack', 'Collaborative Editing Process', 'Convenient digital delivery and cloud storage'];
-  const portfolioImages = ['https://images.unsplash.com/photo-1519741497674-611481863552', 'https://images.unsplash.com/photo-1583939003579-730e3918a45a', 'https://images.unsplash.com/photo-1537633552985-df8429e8048b', 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92'];
+  const portfolioImages = ['https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Arti%20Brandon%20Highlight%20FINAL.00_11_18_27.Still006.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Arti%20Brandon%20Highlight%20FINAL.00_03_49_08.Still002.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Erica%20and%20Jonathan%20Wedding%20Final.00_06_04_17.Still006.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Screenshot%202023-10-01%20at%209.08.16%20AM.png?raw=true'];
   const nextSteps = ['Contact for custom quote based on your specific needs and vision', 'Contract signing and booking process with deposit', 'Pre-wedding consultation and timeline planning', 'Professional wedding day coverage with artistic storytelling', 'Post-production editing and delivery of final film(s)'];
   
   const handleStartJourney = () => {
@@ -79,27 +79,31 @@ const Pricing = () => {
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  2 hours of filming
+                  3 hours of filming
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Basic ceremony coverage
+                  Scenery, Aerials, First Look, and Bridal Party
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Up to 6 people
+                  Complete Ceremony Coverage
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  50+ edited photos
+                  An elegantly edited film of your ceremony.
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Online gallery
+                  Online Delivery within 4 Weeks
+                </li>
+                <li className="flex items-center">
+                  <Check className="w-4 h-4 text-teal-600 mr-2" />
+                  
                 </li>
               </ul>
               <button className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors">
-                Learn More
+                Get a Quote
               </button>
             </div>
 
@@ -113,27 +117,27 @@ const Pricing = () => {
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  4 hours of filming
+                  5 hours of filming
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Ceremony + reception coverage
+                  Scenery, Aerials, First Look, and Bridal Party
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  200+ edited photos
+                  Ceremony + Reception Coverage
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Highlight video
+                  A 3-minute Highlight Video and Full Ceremony Video
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Online gallery & prints
+                  Online Delivery within 4 Weeks
                 </li>
               </ul>
               <button className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors">
-                Learn More
+                Get a Quote
               </button>
             </div>
 
@@ -144,19 +148,19 @@ const Pricing = () => {
               <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  8+ hours of filming
+                  6 hours of filming
+                </li>
+                <li className="flex items-center"> 
+                  <Check className="w-4 h-4 text-teal-600 mr-2" />
+                  Wedding preparation, Scenery, Full Ceremony + Reception
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Full day coverage
+                  A 12-minute Highlight Video and Full Ceremony Video
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  500+ edited photos
-                </li>
-                <li className="flex items-center">
-                  <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  Full ceremony video
+                  Full Toasts Video
                 </li>
                 <li className="flex items-center">
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
@@ -164,7 +168,7 @@ const Pricing = () => {
                 </li>
               </ul>
               <button className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors">
-                Learn More
+                Get a Quote
               </button>
             </div>
           </div>
@@ -190,7 +194,7 @@ const Pricing = () => {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <h2 className="text-4xl md:text-6xl font-serif mb-6">Fully Customizable</h2>
           <h3 className="text-2xl md:text-3xl font-light mb-8">
-            All packages are fully customizable based on your personal desires and needs.
+            All packages are fully customizable based on your personal desires, needs, and budget.
           </h3>
           <p className="text-lg leading-relaxed max-w-3xl mx-auto">
             Every wedding is unique, and your photography package should be too. Whether you need 
@@ -214,13 +218,13 @@ const Pricing = () => {
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 I believe in building genuine relationships with my couples. From our first consultation 
                 to the delivery of your final gallery, I'm here to support you every step of the way. 
-                My goal is not just to be your photographer, but to be someone you trust completely 
+                My goal is not just to be your videographer, but to be someone you trust completely 
                 on your wedding day.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 I offer flexible scheduling, destination coverage, and accommodations for special 
                 requests. Your comfort and vision are my priority, and I'm committed to making your 
-                photography experience as seamless and enjoyable as possible.
+                experience as seamless and enjoyable as possible.
               </p>
             </div>
           </div>
