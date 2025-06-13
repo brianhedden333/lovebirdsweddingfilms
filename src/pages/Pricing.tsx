@@ -190,14 +190,18 @@ const Pricing = () => {
           </div>
 
           {/* Ceremony Sample Video */}
-          <div className="mt-16">
-            <VideoEmbed 
-              title="Ceremony Sample" 
-              description="A glimpse into the beautiful moments we capture during your ceremony" 
-              videoId="1092532920" 
-              platform="vimeo" 
-            />
-          </div>
+         
+           <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+         <VideoEmbed title="12-minute Highlight Sample" videoId="873857580" platform="vimeo" />
+         
+         <VideoEmbed title="3-minute Highlight Sample" videoId="732245572" platform="vimeo" />
+          
+         <VideoEmbed title="Ceremony Sample" videoId="1092532920" platform="vimeo" />
+          
+          
+        </div>
+      </section>
         </div>
       </section>
 
