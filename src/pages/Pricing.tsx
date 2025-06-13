@@ -13,6 +13,10 @@ const Pricing = () => {
     window.location.href = '/#contact';
   };
 
+  const handleGetQuote = () => {
+    window.location.href = '/#contact';
+  };
+
   return <div className="min-h-screen">
       <Header />
       
@@ -60,7 +64,7 @@ const Pricing = () => {
       {/* Package Examples Header */}
       <section className="relative h-96 flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: 'url(https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)'
+        backgroundImage: 'url(/lovable-uploads/e191e074-449c-4a21-b32f-b727657d412f.png)'
       }} />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white">
@@ -102,7 +106,13 @@ const Pricing = () => {
                   
                 </li>
               </ul>
-              <button className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors">
+
+
+              <button 
+                onClick={handleGetQuote}
+                className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors"
+              >
+
                 Get a Quote
               </button>
             </div>
@@ -136,7 +146,12 @@ const Pricing = () => {
                   Online Delivery within 4 Weeks
                 </li>
               </ul>
-              <button className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors">
+
+              <button 
+                onClick={handleGetQuote}
+                className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors"
+              >
+
                 Get a Quote
               </button>
             </div>
@@ -167,7 +182,11 @@ const Pricing = () => {
                   Bridal portraits included
                 </li>
               </ul>
-              <button className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors">
+
+              <button 
+                onClick={handleGetQuote}
+                className="w-full bg-teal-600 text-white py-3 rounded-lg hover:bg-teal-700 transition-colors"
+              >
                 Get a Quote
               </button>
             </div>
