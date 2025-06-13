@@ -6,7 +6,7 @@ import VideoEmbed from '@/components/VideoEmbed';
 
 const Pricing = () => {
   const services = ['Planning and consultation with you, the wedding planner, and/or vendors', 'Coverage from 2 hours to 12 hours', 'Free travel up to 50 miles from Boulder', 'Cinematic Aerial Footage', 'Video content options for before and/or after the ceremony', 'Support with livestreaming', 'Edited to your personalized soundtrack', 'Collaborative Editing Process', 'Convenient digital delivery and cloud storage'];
-  const portfolioImages = ['https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Arti%20Brandon%20Highlight%20FINAL.00_11_18_27.Still006.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Arti%20Brandon%20Highlight%20FINAL.00_03_49_08.Still002.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Erica%20and%20Jonathan%20Wedding%20Final.00_06_04_17.Still006.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Screenshot%202023-10-01%20at%209.08.16%20AM.png?raw=true'];
+  const portfolioImages = ['https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Alexis.00_00_06_10.Still002.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Arti%20Brandon%20Highlight%20FINAL.00_03_49_08.Still002.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Erica%20and%20Jonathan%20Wedding%20Final.00_06_04_17.Still006.jpg?raw=true', 'https://github.com/brianhedden333/lovebirdsweddingfilms/blob/main/public/lovable-uploads/Austin.00_00_39_16.Still001%20copy.jpg?raw=true'];
   const nextSteps = ['Contact for custom quote based on your specific needs and vision', 'Contract signing and booking process with deposit', 'Pre-wedding consultation and timeline planning', 'Professional wedding day coverage with artistic storytelling', 'Post-production editing and delivery of final film(s)'];
   
   const handleStartJourney = () => {
@@ -101,10 +101,7 @@ const Pricing = () => {
                   <Check className="w-4 h-4 text-teal-600 mr-2" />
                   Online Delivery within 4 Weeks
                 </li>
-                <li className="flex items-center">
-                  <Check className="w-4 h-4 text-teal-600 mr-2" />
-                  
-                </li>
+                
               </ul>
 
 
