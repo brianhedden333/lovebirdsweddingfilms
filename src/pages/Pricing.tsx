@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import VideoEmbed from '@/components/VideoEmbed';
 
 const Pricing = () => {
-  const services = ['Planning and consultation with you, the wedding planner, and/or vendors', 'Coverage from 2 hours (elopement) to 12 hours (full celebration)', 'Online photo finishing directions and weather contingency - up to two revisions if needed', 'Online gallery', 'Print release for personal use', 'Video content options for before and/or after the ceremony', 'Expert hair and makeup coordination', 'Bridal portraits', 'The last element that tops it all off', 'One round of editing feedback', 'Digital delivery and cloud storage'];
+  const services = ['Planning and consultation with you, the wedding planner, and/or vendors', 'Coverage from 2 hours to 12 hours', 'Free travel up to 50 miles from Boulder', 'Cinematic Aerial Footage', 'Video content options for before and/or after the ceremony', 'Support with livestreaming', 'Edited to your personalized soundtrack', 'Collaborative Editing Process', 'Convenient digital delivery and cloud storage'];
   const portfolioImages = ['https://images.unsplash.com/photo-1519741497674-611481863552', 'https://images.unsplash.com/photo-1583939003579-730e3918a45a', 'https://images.unsplash.com/photo-1537633552985-df8429e8048b', 'https://images.unsplash.com/photo-1606216794074-735e91aa2c92'];
-  const nextSteps = ['Contact for custom quote based on your specific needs and vision', 'Contract signing and booking process with deposit', 'Pre-wedding consultation and timeline planning', 'Professional wedding day coverage with artistic storytelling', 'Post-production editing and delivery of final gallery'];
+  const nextSteps = ['Contact for custom quote based on your specific needs and vision', 'Contract signing and booking process with deposit', 'Pre-wedding consultation and timeline planning', 'Professional wedding day coverage with artistic storytelling', 'Post-production editing and delivery of final film(s)'];
   
   const handleStartJourney = () => {
     window.location.href = '/#contact';
