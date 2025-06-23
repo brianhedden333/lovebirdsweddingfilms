@@ -1,5 +1,3 @@
-
-
 import { Check } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -206,10 +204,10 @@ const Pricing = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
          <VideoEmbed title="12-minute Highlight Samples" videoId="873857580" platform="vimeo" />
          
-         <VideoEmbed videoId="737991237" platform="vimeo" />
+         <VideoEmbed title="Highlight Sample" videoId="737991237" platform="vimeo" />
           
          <VideoEmbed title="Ceremony Samples" videoId="1092532920" platform="vimeo" />
-          <VideoEmbed  videoId="1092526756" platform="vimeo" />
+          <VideoEmbed title="Ceremony Sample" videoId="1092526756" platform="vimeo" />
           
           
         </div>
