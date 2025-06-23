@@ -1,4 +1,3 @@
-
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -31,16 +30,16 @@ const Index = () => {
       <Header />
       
       {/* Hero Section with Vimeo Video Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <iframe 
   src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&h=712f8b21df" 
   className="absolute top-0 left-1/2 h-full w-auto min-w-full transform -translate-x-1/2"
   style={{
-    minHeight: '100%',
+    minHeight: '100vh',
     minWidth: '177.78vh', // 16:9 aspect ratio maintained at full height
     width: 'auto',
-    height: '100%'
+    height: '100vh'
   }}
   frameBorder="0"
   allow="autoplay; fullscreen; picture-in-picture" 
@@ -50,10 +49,10 @@ const Index = () => {
         </div>
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-serif mb-6 animate-fade-in font-light">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif mb-6 animate-fade-in font-light">
             Wedding Films <span className="italic font-normal">with Heart</span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed font-light">
             Capturing the timeless beauty of your most precious moments
           </p>
         </div>
