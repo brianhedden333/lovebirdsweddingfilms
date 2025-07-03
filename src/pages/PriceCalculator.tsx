@@ -1,4 +1,5 @@
 
+
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -101,14 +102,23 @@ const PriceCalculator = () => {
       };
 
       console.log("Sending quote data to webhook:", quoteData);
+      console.log("Request URL:", 'https://n8n.brianhedden.com/webhook-test/wedding-quote');
 
       const response = await fetch('https://n8n.brianhedden.com/webhook-test/wedding-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
+        mode: 'cors',
         body: JSON.stringify(quoteData),
       });
+
+      console.log("Response status:", response.status);
+      console.log("Response headers:", response.headers);
+      
+      const responseText = await response.text();
+      console.log("Response body:", responseText);
 
       if (response.ok) {
         toast({
@@ -117,7 +127,8 @@ const PriceCalculator = () => {
         });
         setEmail('');
       } else {
-        throw new Error('Failed to send quote');
+        console.error("Failed response:", response.status, responseText);
+        throw new Error(`Failed to send quote: ${response.status} ${responseText}`);
       }
     } catch (error) {
       console.error("Error sending quote:", error);
