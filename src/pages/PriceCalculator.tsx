@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -101,7 +102,7 @@ const PriceCalculator = () => {
 
       console.log("Sending quote data to webhook:", quoteData);
 
-      const response = await fetch('https://n8n.brianhedden.com/webhook/wedding-quote', {
+      const response = await fetch('https://n8n.brianhedden.com/webhook-test/wedding-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
