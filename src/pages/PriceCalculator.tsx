@@ -58,18 +58,50 @@ const PriceCalculator = () => {
     try {
       const quoteData = {
         email: email,
-        booking: `${amounts.booking} wedding × $${rates.booking} = $${calculateTotal(amounts.booking, rates.booking)}`,
-        hoursOfFilming: `${amounts.hoursOfFilming} hours × $${rates.hoursOfFilming} = $${calculateTotal(amounts.hoursOfFilming, rates.hoursOfFilming)}`,
-        ceremonyEdit: `${amounts.ceremonyEdit} edit × $${rates.ceremonyEdit} = $${calculateTotal(amounts.ceremonyEdit, rates.ceremonyEdit)}`,
-        threeMinuteHighlight: `${amounts.threeMinuteHighlight} edit × $${rates.threeMinuteHighlight} = $${calculateTotal(amounts.threeMinuteHighlight, rates.threeMinuteHighlight)}`,
-        twelveMinuteHighlight: `${amounts.twelveMinuteHighlight} edit × $${rates.twelveMinuteHighlight} = $${calculateTotal(amounts.twelveMinuteHighlight, rates.twelveMinuteHighlight)}`,
-        toastsVideo: `${amounts.toastsVideo} edit × $${rates.toastsVideo} = $${calculateTotal(amounts.toastsVideo, rates.toastsVideo)}`,
-        extraTravel: `${amounts.extraTravel} miles × $${rates.extraTravel} = $${calculateTotal(amounts.extraTravel, rates.extraTravel)}`,
-        grandTotal: `$${grandTotal}`,
-        subject: 'Wedding Film Quote Request'
+        quote_details: {
+          booking: {
+            amount: amounts.booking,
+            rate: rates.booking,
+            total: calculateTotal(amounts.booking, rates.booking)
+          },
+          hoursOfFilming: {
+            amount: amounts.hoursOfFilming,
+            rate: rates.hoursOfFilming,
+            total: calculateTotal(amounts.hoursOfFilming, rates.hoursOfFilming)
+          },
+          ceremonyEdit: {
+            amount: amounts.ceremonyEdit,
+            rate: rates.ceremonyEdit,
+            total: calculateTotal(amounts.ceremonyEdit, rates.ceremonyEdit)
+          },
+          threeMinuteHighlight: {
+            amount: amounts.threeMinuteHighlight,
+            rate: rates.threeMinuteHighlight,
+            total: calculateTotal(amounts.threeMinuteHighlight, rates.threeMinuteHighlight)
+          },
+          twelveMinuteHighlight: {
+            amount: amounts.twelveMinuteHighlight,
+            rate: rates.twelveMinuteHighlight,
+            total: calculateTotal(amounts.twelveMinuteHighlight, rates.twelveMinuteHighlight)
+          },
+          toastsVideo: {
+            amount: amounts.toastsVideo,
+            rate: rates.toastsVideo,
+            total: calculateTotal(amounts.toastsVideo, rates.toastsVideo)
+          },
+          extraTravel: {
+            amount: amounts.extraTravel,
+            rate: rates.extraTravel,
+            total: calculateTotal(amounts.extraTravel, rates.extraTravel)
+          }
+        },
+        grandTotal: grandTotal,
+        timestamp: new Date().toISOString()
       };
 
-      const response = await fetch('https://formspree.io/f/mrbkdrno', {
+      console.log("Sending quote data to webhook:", quoteData);
+
+      const response = await fetch('https://n8n.brianhedden.com/webhook/wedding-quote', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -80,13 +112,14 @@ const PriceCalculator = () => {
       if (response.ok) {
         toast({
           title: "Quote Sent!",
-          description: "Your wedding film quote has been sent to your email and Brian.",
+          description: "Your wedding film quote has been sent successfully.",
         });
         setEmail('');
       } else {
         throw new Error('Failed to send quote');
       }
     } catch (error) {
+      console.error("Error sending quote:", error);
       toast({
         title: "Error",
         description: "Failed to send quote. Please try again.",
