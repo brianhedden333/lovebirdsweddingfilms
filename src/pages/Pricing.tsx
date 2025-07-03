@@ -13,6 +13,13 @@ import { Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Pricing = () => {
+  const handlePricingCalculatorClick = () => {
+    // Small delay to allow navigation to complete before scrolling
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -44,7 +51,7 @@ const Pricing = () => {
             Use our Pricing Calculator to customize your own quote based on your specific needs and preferences. 
             Get an instant estimate tailored to your wedding day vision.
           </p>
-          <Link to="/price-calculator">
+          <Link to="/price-calculator" onClick={handlePricingCalculatorClick}>
             <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg">
               <Calculator className="w-5 h-5 mr-2" />
               Use Pricing Calculator
