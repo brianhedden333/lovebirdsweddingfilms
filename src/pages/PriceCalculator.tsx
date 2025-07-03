@@ -18,9 +18,9 @@ const PriceCalculator = () => {
     hoursOfFilming: 3,
     ceremonyEdit: 1,
     threeMinuteHighlight: 1,
-    twelveMinuteHighlight: 1,
+    twelveMinuteHighlight: 0,
     toastsVideo: 1,
-    extraTravel: 50
+    extraTravel: 0
   });
 
   const rates = {
@@ -60,7 +60,7 @@ const PriceCalculator = () => {
     // In a real implementation, this would send the email via an API
     toast({
       title: "Quote Sent!",
-      description: "Your wedding video quote has been sent to your email and Brian.",
+      description: "Your wedding film quote has been sent to your email and Brian.",
     });
     console.log("Quote data:", { amounts, rates, grandTotal, email });
   };
@@ -76,15 +76,15 @@ const PriceCalculator = () => {
     'Convenient digital delivery and cloud storage'
   ];
 
-  const portfolioImages = [
-    'https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'
+  const galleryImages = [
+    '/lovable-uploads/7749a1ce-44a2-4f52-9b63-135147672db0.png',
+    '/lovable-uploads/b3be7fa1-64a2-45a2-a9ab-a52e499d1181.png',
+    '/lovable-uploads/e191e074-449c-4a21-b32f-b727657d412f.png',
+    '/lovable-uploads/d951e5ac-7fc1-4053-a7d2-3b5131f1de71.png',
+    '/lovable-uploads/1ce2b5ba-2869-40d5-aee3-d18a2266df72.png',
+    '/lovable-uploads/0320dc7b-7bdf-432e-826d-89094d7190b3.png',
+    '/lovable-uploads/af471e6f-52a3-44a8-81b1-65913f79dacd.png',
+    '/lovable-uploads/d92965bf-4069-4ab3-a957-459b809fc268.png'
   ];
 
   return (
@@ -96,10 +96,10 @@ const PriceCalculator = () => {
         <section className="relative py-20 bg-gradient-to-br from-teal-50 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-serif text-gray-900 mb-6">
-              Wedding Video Price Calculator
+              Wedding Film Price Calculator
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Customize your wedding video package and get an instant quote
+              Customize your wedding film package and get an instant quote
             </p>
           </div>
         </section>
@@ -108,7 +108,7 @@ const PriceCalculator = () => {
         <section className="py-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {portfolioImages.slice(0, 4).map((image, index) => (
+              {galleryImages.slice(0, 4).map((image, index) => (
                 <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img 
                     src={image} 
@@ -144,7 +144,7 @@ const PriceCalculator = () => {
             <Card className="shadow-xl">
               <CardHeader className="bg-teal-600 text-white">
                 <CardTitle className="text-2xl font-serif text-center">
-                  Calculate Your Wedding Video Investment
+                  Calculate Your Wedding Film Investment
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8">
@@ -163,14 +163,9 @@ const PriceCalculator = () => {
                       <tr className="border-b border-gray-100">
                         <td className="py-4 px-2 font-medium">Booking</td>
                         <td className="py-4 px-2 text-center">
-                          <Input
-                            type="number"
-                            value={amounts.booking}
-                            onChange={(e) => handleAmountChange('booking', e.target.value)}
-                            className="w-20 text-center"
-                            min="0"
-                            step="1"
-                          />
+                          <div className="w-20 text-center bg-gray-100 border border-gray-300 rounded px-3 py-2 mx-auto">
+                            {amounts.booking}
+                          </div>
                         </td>
                         <td className="py-4 px-2 text-center text-gray-600">wedding</td>
                         <td className="py-4 px-2 text-center">${rates.booking}</td>
@@ -340,7 +335,7 @@ const PriceCalculator = () => {
         <section className="py-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {portfolioImages.slice(4, 8).map((image, index) => (
+              {galleryImages.slice(4, 8).map((image, index) => (
                 <div key={index + 4} className="aspect-square overflow-hidden rounded-lg shadow-md">
                   <img 
                     src={image} 
