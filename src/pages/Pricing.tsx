@@ -8,6 +8,9 @@ import PackageCards from '@/components/pricing/PackageCards';
 import CustomizableSection from '@/components/pricing/CustomizableSection';
 import PersonalTouch from '@/components/pricing/PersonalTouch';
 import NextStepsSection from '@/components/pricing/NextStepsSection';
+import { Button } from '@/components/ui/button';
+import { Calculator } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   return (
@@ -30,6 +33,25 @@ const Pricing = () => {
       </section>
 
       <PackageCards />
+
+      {/* Pricing Calculator Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-6">
+            Need a Custom Quote?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Use our Pricing Calculator to customize your own quote based on your specific needs and preferences. 
+            Get an instant estimate tailored to your wedding day vision.
+          </p>
+          <Link to="/price-calculator">
+            <Button size="lg" className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 text-lg">
+              <Calculator className="w-5 h-5 mr-2" />
+              Use Pricing Calculator
+            </Button>
+          </Link>
+        </div>
+      </section>
 
       {/* Ceremony Sample Video */}
       <section className="py-20 bg-white">
