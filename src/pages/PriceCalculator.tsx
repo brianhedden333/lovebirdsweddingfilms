@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -56,13 +55,44 @@ const PriceCalculator = () => {
       return;
     }
 
-    // For now, we'll just show a success message since there's no backend
-    // In a real implementation, this would send the email via an API
-    toast({
-      title: "Quote Sent!",
-      description: "Your wedding film quote has been sent to your email and Brian.",
-    });
-    console.log("Quote data:", { amounts, rates, grandTotal, email });
+    try {
+      const quoteData = {
+        email: email,
+        booking: `${amounts.booking} wedding × $${rates.booking} = $${calculateTotal(amounts.booking, rates.booking)}`,
+        hoursOfFilming: `${amounts.hoursOfFilming} hours × $${rates.hoursOfFilming} = $${calculateTotal(amounts.hoursOfFilming, rates.hoursOfFilming)}`,
+        ceremonyEdit: `${amounts.ceremonyEdit} edit × $${rates.ceremonyEdit} = $${calculateTotal(amounts.ceremonyEdit, rates.ceremonyEdit)}`,
+        threeMinuteHighlight: `${amounts.threeMinuteHighlight} edit × $${rates.threeMinuteHighlight} = $${calculateTotal(amounts.threeMinuteHighlight, rates.threeMinuteHighlight)}`,
+        twelveMinuteHighlight: `${amounts.twelveMinuteHighlight} edit × $${rates.twelveMinuteHighlight} = $${calculateTotal(amounts.twelveMinuteHighlight, rates.twelveMinuteHighlight)}`,
+        toastsVideo: `${amounts.toastsVideo} edit × $${rates.toastsVideo} = $${calculateTotal(amounts.toastsVideo, rates.toastsVideo)}`,
+        extraTravel: `${amounts.extraTravel} miles × $${rates.extraTravel} = $${calculateTotal(amounts.extraTravel, rates.extraTravel)}`,
+        grandTotal: `$${grandTotal}`,
+        subject: 'Wedding Film Quote Request'
+      };
+
+      const response = await fetch('https://formspree.io/f/mrbkdrno', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(quoteData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Quote Sent!",
+          description: "Your wedding film quote has been sent to your email and Brian.",
+        });
+        setEmail('');
+      } else {
+        throw new Error('Failed to send quote');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send quote. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   const automaticallyIncluded = [
