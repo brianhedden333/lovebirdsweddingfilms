@@ -1,4 +1,3 @@
-
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -35,12 +34,12 @@ const Index = () => {
         <div className="absolute inset-0 w-full h-full">
           <iframe 
   src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&h=712f8b21df" 
-  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full lg:w-auto lg:h-full object-cover"
+  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
   style={{
-    minHeight: '100%',
+    height: '100%',
+    width: '177.78vh', // 16:9 aspect ratio - ensures full height coverage
     minWidth: '100%',
-    width: 'auto',
-    height: 'auto'
+    minHeight: '100%'
   }}
   frameBorder="0"
   allow="autoplay; fullscreen; picture-in-picture" 
