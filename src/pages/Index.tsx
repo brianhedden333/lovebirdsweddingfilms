@@ -33,22 +33,20 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <iframe 
-  src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&h=712f8b21df" 
-  className="absolute inset-0"
-  style={{
-    width: '177.78vh',
-    height: '100vh',
-    minWidth: '100vw',
-    minHeight: '100vh',
-    left: '50%',
-    top: '0',
-    transform: 'translateX(-50%)'
-  }}
-  frameBorder="0"
-  allow="autoplay; fullscreen; picture-in-picture" 
-  allowFullScreen
-  title="Love Birds Wedding Films Background" 
-/>
+            src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&background=1" 
+            className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full"
+            style={{
+              transform: 'translate(-50%, -50%)',
+              width: '100vw',
+              height: '56.25vw',
+              minHeight: '100vh',
+              minWidth: '177.78vh'
+            }}
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowFullScreen
+            title="Love Birds Wedding Films Background" 
+          />
         </div>
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 text-center text-white px-4">
