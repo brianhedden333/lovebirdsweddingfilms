@@ -1,3 +1,4 @@
+
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -33,7 +34,7 @@ const Index = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <iframe 
-            src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&background=1" 
+            src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&background=1&h=712f8b21df" 
             className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full"
             style={{
               transform: 'translate(-50%, -50%)',
