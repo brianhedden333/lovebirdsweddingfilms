@@ -126,7 +126,7 @@ const Index = () => {
                 <Camera className="w-8 h-8 text-teal-600" />
               </div>
               <h3 className="text-xl font-serif text-gray-900 mb-3 font-light">
-                <button onClick={handleContactClick} className="hover:text-teal-600 transition-colors">
+                <button onClick={handleContactClick} className="hover:text-teal-600 transition-colors font-medium">
                   Contact Me
                 </button>
               </h3>
