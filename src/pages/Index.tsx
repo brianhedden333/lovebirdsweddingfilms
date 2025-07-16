@@ -136,7 +136,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-8 h-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-serif text-gray-900 mb-3 font-light">Book It</h3>
+              <h3 className="text-xl font-sans text-gray-900 mb-3 font-medium">Book It</h3>
               <p className="text-gray-600 font-light">Secure your date with a custom package tailored to your needs</p>
             </div>
             <div className="text-center">
