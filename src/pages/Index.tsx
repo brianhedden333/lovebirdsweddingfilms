@@ -1,4 +1,3 @@
-
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -76,7 +75,7 @@ const Index = () => {
                 Your wedding day is a celebration of your unique journey together, and I'm honored to 
                 capture those fleeting moments that become forever memories.
               </p>
-              <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-light">"I cry watching our wedding film—it captured every moment so beautifully. It's like reliving the best day of our lives."</blockquote>
+              <blockquote className="text-xl font-serif text-teal-600 italic border-l-4 border-teal-200 pl-6 font-medium">"I cry watching our wedding film—it captured every moment so beautifully. It's like reliving the best day of our lives."</blockquote>
             </div>
           </div>
         </div>
