@@ -143,7 +143,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Film className="w-8 h-8 text-teal-600" />
               </div>
-              <h3 className="text-xl font-serif text-gray-900 mb-3 font-light">Film It</h3>
+              <h3 className="text-xl font-sans text-gray-900 mb-3 font-medium">Film It</h3>
               <p className="text-gray-600 font-light">Professional coverage on your special day with artistic storytelling</p>
             </div>
             <div className="text-center">
