@@ -1,3 +1,4 @@
+
 import { Camera, Calendar, Film, Heart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -30,16 +31,16 @@ const Index = () => {
       <Header />
       
       {/* Hero Section with Vimeo Video Background */}
-      <section className="relative h-[100vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[100vh] lg:h-[56.25vw] max-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <iframe 
   src="https://player.vimeo.com/video/1092546746?autoplay=1&loop=1&muted=1&controls=0&h=712f8b21df" 
-  className="absolute top-0 left-1/2 h-full w-auto min-w-full transform -translate-x-1/2"
+  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full lg:w-auto lg:h-full object-cover"
   style={{
-    minHeight: '100vh',
-    minWidth: '177.78vh', // 16:9 aspect ratio maintained at full height
+    minHeight: '100%',
+    minWidth: '100%',
     width: 'auto',
-    height: '100vh'
+    height: 'auto'
   }}
   frameBorder="0"
   allow="autoplay; fullscreen; picture-in-picture" 
