@@ -20,7 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				sans: ['Lato', 'sans-serif'],
-				serif: ['Allura', 'cursive'],
+				serif: ['Mea Culpa', 'cursive'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
