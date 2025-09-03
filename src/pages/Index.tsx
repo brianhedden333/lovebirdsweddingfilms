@@ -103,7 +103,7 @@ const Index = () => {
       {/* Recent Features Gallery */}
       <section id="portfolio" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-serif text-gray-900 text-center mb-12 font-light">
+          <h2 className="text-3xl md:text-4xl text-gray-900 text-center mb-12 font-light" style={{fontFamily: 'Dancing Script, cursive'}}>
             Love is in the Air
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
